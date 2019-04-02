@@ -48,16 +48,23 @@ $("#search-button").on("click", function display() {
 
             var title = $("<p>").html(activityTitle);
             var rating = $("<p>").text(activityRating + "/ ouf of 5");
+
+            var link = $("<a>");
+            link.attr("href", result.productUrl);
+
             var activityImage = $("<img>");
-            activityImage.attr("src", result.coverImage)
+            activityImage.attr("src", result.coverImage);
 
-            actDiv.prepend(title, rating, activityImage);
+            link.append(activityImage);
+            actDiv.append(title, rating, link);
 
-            $("#where-activities-go").prepend(actDiv);
+            $("#where-activities-go").append(actDiv);
 
         });
 
     });
 
-
 });
+
+
+
