@@ -42,11 +42,7 @@ html, body {
 
     }
 
-    .form-inline {
-        
-        margin-left: 275px;
-
-    }
+    
 
     .wrapper {
         text-align: center;
@@ -133,4 +129,16 @@ html, body {
         max-height: 100%;
     }
 
+    #city {
+        margin-left: 600px;
+        float: left;
+        max-width: 150px;
+        
+    }
+
+    #state {
+        float: left;
+        max-width: 150px;
+        
+    }
    

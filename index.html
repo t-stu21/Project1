@@ -21,7 +21,8 @@
 </head>
 
 <body>
-    <div class="weather" id="top_div">
+<div class="row">
+    <div class="weather col-sm-12" id="top_div">
       
             <div class="days" id="today"> placeholder </div>
             <div class="days" id="day2"> placeholder </div>
@@ -29,20 +30,27 @@
             <div class="days" id="day4"> placeholder </div>
         
     </div>
-    
-        <div class="jumbotron">
+</div>
+    <div class="row">
+        <div class="jumbotron col-sm-12">
             <div class="wrapper">
             <h1 class="display-4 text-center">Drift</h1>
             <p class="lead text-center">Discovering places along the way</p>
-            <form class="form-inline">
+            <form class="form-inline col-sm-12" id="city">
                 <i class="fas fa-search" aria-hidden="true"></i>
-                <input class="form-control form-control-sm ml-3 w-75 text-center" type="text" placeholder="Search"
+                <input class="form-control form-control-sm ml-3 w-75 text-center" type="text" placeholder="City"
                     aria-label="Search"> </div>
-            </form>
+                    </form>
+                    <form class="form-inline col-sm-12" id="state">
+                      <i class="fas fa-search" aria-hidden="true"></i>
+                      <input class="form-control form-control-sm ml-3 w-75 text-center" type="text" placeholder="State"
+                          aria-label="Search"> </div>
+                          </form>
         </div>
-        
-        </div>
-        <div id="bottom_div" class="text-center">
+      </div>
+</div>
+<div class="row">
+        <div id="bottom_div" class="text-center col-sm-12">
             <div id="first" class="tourist-display ui card">
                 <div class="image">
                   <img src="https://picsum.photos/1000">
@@ -63,7 +71,7 @@
                   </a>
                 </div>
               </div>
-
+            </div>
               
 
 
