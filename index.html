@@ -24,14 +24,13 @@
 
             <div class="jumbotron">
                 <div class="text-center">
-                    <h2 class="display-2">W E A T H E R P L E A S E </h2>
+                    <h2 class="display-2">W E A T H E R </h2>
                     <form class="form-inline">
 
                         <div class="form-group mx-sm-3 mb-2">
                             <label for="weathersearch" class="sr-only">Search weather anywhere!</label>
-                            <input type="text" class="form-control" id="location-input"
-                                placeholder="search for weather..">
-
+                            <input type="text" class="form-control" id="city-input" placeholder="City here">
+                            <input type="text" class="form-control" id="state-input" placeholder="State here">
 
                         </div>
                         <button type="submit" class="btn btn-primary mb-2" id="search">Show me the weather!</button>
@@ -41,7 +40,11 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-sm-12" id="weatherresult">
 
+                </div>
+            </div>
         </div>
 
 
