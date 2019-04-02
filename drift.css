@@ -42,12 +42,20 @@ html, body {
 
     }
 
-    
-
-    .wrapper {
-        text-align: center;
+    form {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
     }
 
+    input { 
+        margin: 0 auto;
+    }
+
+  
     .weather {
         width: 100%;
     }
@@ -129,16 +137,10 @@ html, body {
         max-height: 100%;
     }
 
-    #city {
-        margin-left: 600px;
-        float: left;
-        max-width: 150px;
-        
-    }
+    
+   
+   
+   
+   
 
-    #state {
-        float: left;
-        max-width: 150px;
-        
-    }
    
