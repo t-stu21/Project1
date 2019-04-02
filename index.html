@@ -2,81 +2,82 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Drift</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--css-->
-    <link rel="stylesheet" href="drift.css">
-    <link rel="stylesheet" type="text/css" href="assets/Semantic-UI-CSS-master/semantic.css">
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-<script src="assets/Semantic-UI-CSS-master/semantic.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drift</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--css-->
+  <link rel="stylesheet" href="drift.css">
+  <link rel="stylesheet" type="text/css" href="assets/Semantic-UI-CSS-master/semantic.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="assets/Semantic-UI-CSS-master/semantic.js"></script>
 
 </head>
 
 <body>
-    <div class="weather" id="top_div">
-      
-            <div class="days" id="today"> placeholder </div>
-            <div class="days" id="day2"> placeholder </div>
-            <div class="days" id="day3"> placeholder </div>
-            <div class="days" id="day4"> placeholder </div>
-        
+  <div class="weather" id="top_div">
+
+    <div class="days" id="today"> placeholder </div>
+    <div class="days" id="day2"> placeholder </div>
+    <div class="days" id="day3"> placeholder </div>
+    <div class="days" id="day4"> placeholder </div>
+
+  </div>
+
+  <div class="jumbotron">
+    <div class="wrapper">
+      <h1 class="display-4 text-center">Drift</h1>
+      <p class="lead text-center">Discovering places along the way</p>
+      <form class="form-inline">
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <input class="form-control form-control-sm ml-3 w-75 text-center" type="text" placeholder="Search"
+          aria-label="Search">
     </div>
-    
-        <div class="jumbotron">
-            <div class="wrapper">
-            <h1 class="display-4 text-center">Drift</h1>
-            <p class="lead text-center">Discovering places along the way</p>
-            <form class="form-inline">
-                <i class="fas fa-search" aria-hidden="true"></i>
-                <input class="form-control form-control-sm ml-3 w-75 text-center" type="text" placeholder="Search"
-                    aria-label="Search"> </div>
-            </form>
+    </form>
+  </div>
+
+  </div>
+  <div id="bottom_div" class="text-center">
+    <div id="first" class="tourist-display ui card">
+      <div class="image">
+        <img src="https://picsum.photos/1000">
+      </div>
+      <div class="content">
+        <a class="header">Placeholder Tourism Idea</a>
+        <div class="meta">
+          <span class="date">For 2019</span>
         </div>
-        
+        <div class="description">
+          This will eventually be populated with tourism stuff
         </div>
-        <div id="bottom_div" class="text-center">
-            <div id="first" class="tourist-display ui card">
-                <div class="image">
-                  <img src="https://picsum.photos/1000">
-                </div>
-                <div class="content">
-                  <a class="header">Placeholder Tourism Idea</a>
-                  <div class="meta">
-                    <span class="date">For 2019</span>
-                  </div>
-                  <div class="description">
-                    This will eventually be populated with tourism stuff
-                  </div>
-                </div>
-                <div class="extra content">
-                  <a>
-                    <i class="user icon"></i>
-                    150 likes
-                  </a>
-                </div>
-              </div>
-
-              
+      </div>
+      <div class="extra content">
+        <a>
+          <i class="user icon"></i>
+          150 likes
+        </a>
+      </div>
+    </div>
 
 
 
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="assets/api.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>

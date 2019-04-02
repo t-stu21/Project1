@@ -14,7 +14,7 @@
 // need to incorporate firebase for recent searches
 var stateSearched = "";
 var citySearched = "";
-console.log(citySearched);
+console.log("test" + citySearched);
 
 // ajax call for leezair api
 // will need to change target id to match tylers
