@@ -1,8 +1,9 @@
 $(document).ready(function () {
 
     var database = firebase.database(); //firebase variable
+    var weatherIconp = ''; //for weather icons
 
-    // 113LBdVIIvDY0K9ZzAPIvjkrbVShUugG
+
     $("#search").on("click", function (event) {
         event.preventDefault();
 
@@ -11,7 +12,7 @@ $(document).ready(function () {
 
         console.log(cityLocation);
         console.log(stateLocation);
-
+        // grabbing the location searched 
         var searchLocat = "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=113LBdVIIvDY0K9ZzAPIvjkrbVShUugG&q=" + cityLocation + "%20" + stateLocation + "&language=en-us&details=true";
         console.log(searchLocat);
 
@@ -19,6 +20,7 @@ $(document).ready(function () {
             url: searchLocat,
             method: "GET"
         })
+            //Getting location key for searched location
             .then(function (response) {
                 var locationResponse = response;
                 for (var i = 0; i < locationResponse.length; i++)
@@ -26,13 +28,9 @@ $(document).ready(function () {
                 console.log(locationResponse[0].Key);
                 var locationKeyNew = locationResponse[0].Key;
 
-
+                //forecast URL
                 var forecast = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/" + locationKeyNew + "?apikey=113LBdVIIvDY0K9ZzAPIvjkrbVShUugG&language=en-us&details=true&metric=false/";
 
-
-                // var apiKey = '&appid=a8d8257e8f1ad8676bb90b41f879112c'
-                // var unit = '&units=imperial'
-                // var forecastSer = forecast + location + unit + apiKey;
 
                 $.ajax({
                     url: forecast,
@@ -48,6 +46,49 @@ $(document).ready(function () {
                             console.log(response.DailyForecasts[i].Day.Wind.Speed.Value);
                             console.log(response.DailyForecasts[i].Day.Wind.Speed.Unit);
 
+                            var weathDate = response.DailyForecasts[i].Date;
+                            var tempMin = response.DailyForecasts[i].Temperature.Minimum.Value;
+                            var tempMax = response.DailyForecasts[i].Temperature.Maximum.Value;
+                            var tempMinUnit = response.DailyForecasts[i].Temperature.Maximum.Unit;
+                            var tempMaxUnit = response.DailyForecasts[i].Temperature.Minimum.Unit;
+                            var windSpeed = response.DailyForecasts[i].Day.Wind.Speed.Value;
+                            var windUnit = response.DailyForecasts[i].Day.Wind.Speed.Unit;
+                            var weatherIcon = response.DailyForecasts[i].Day.Icon;
+
+                            //check if icon needs a 0 in front of it 
+                            function checkIcon() {
+
+                                if (JSON.stringify(weatherIcon) < 9) {
+                                    weatherIconp = 0;
+                                } else {
+                                    weatherIconp = '';
+                                }
+                                console.log(weatherIconp);
+                            }
+
+                            checkIcon();
+                            var iconDescript = response.DailyForecasts[i].Day.LongPhrase;
+                            var weatherTest = $("<div>");
+                            var weatherTInfo = $("<p>");
+                            var weatherIconUrl = 'https://developer.accuweather.com/sites/default/files/';
+                            var weatherDisp = $("<img>");
+                            weatherDisp.attr('src', weatherIconUrl + weatherIconp + weatherIcon + '-s.png');
+                            console.log(weatherDisp);
+
+                            //put results in html
+                            weatherTInfo.append(weatherDisp);
+                            weatherTInfo.append(iconDescript + "<br>");
+                            weatherTInfo.append("Date: " + weathDate + "<br>");
+                            weatherTInfo.append("Min Temp: " + tempMin + tempMinUnit + "<br>");
+                            weatherTInfo.append("Max Temp: " + tempMax + tempMaxUnit + "<br>");
+                            weatherTInfo.append("Wind: " + windSpeed + windUnit + "<br>");
+
+
+
+
+
+                            weatherTest.append(weatherTInfo);
+                            $("#weatherresult").append(weatherTest);
                         }
                     }
                     )
