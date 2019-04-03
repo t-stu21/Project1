@@ -11,36 +11,11 @@ html, body {
       margin:auto;
       text-align:center;
     }
-    #mid1_div
-    {
-      height:25%;
-      width:100%;
-      background-color:yellow;
-      margin:auto;
-      text-align:center;
-      color:black;
-    }
-    #mid2_div
-    {
-      height:25%;
-      width:100%;
-      background-color: brown;
-      margin:auto;
-      text-align:center;
-      color:#FFFFFF;
-    }
-    #bottom_div
-    {
-      
-      height:300px;
-      width:100%;
-      background-color:#990000;
-      margin:auto;
-      text-align:center;
-      color:#FFFFFF;
-      text-align: center;
-
-    }
+    
+   .jumbotron {
+       margin-bottom: 0;
+       background-color: transparent;
+   }
 
     form {
         margin-left: auto;
@@ -59,55 +34,60 @@ html, body {
     .weather {
         width: 100%;
     }
+    
+   .days {
+        border-style: solid;
+        border-width: 5px;
+        border-color: black;
+        float: left;
+        width: 25%;
+        height: 100%;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    #bottom_div
+    {
+      
+      height:300px;
+      width:100%;
+     
+      
+
+    }
+
    
-    #today {
-        border-style: solid;
-        border-width: 5px;
-        border-color: black;
-        float: left;
-       width: 25%;
-       height: 100%;
-    }
-
-    #day2 {
-        border-style: solid;
-        border-width: 5px;
-        border-color: black;
-        float: left;
-        width: 25%;
-        height: 100%;
-    }
-
-    #day3 {
-        border-style: solid;
-        border-width: 5px;
-        border-color: black;
-        float: left;
-        width: 25%;
-        height: 100%;
-    }
-
-    #day4 {
-        border-style: solid;
-        border-width: 5px;
-        border-color: black;
-        float: left;
-        width: 25%;
-        height: 100%;
-    }
 
     #first {
-        border: 2px;
-        border-color: black;
-        border-style: solid;
-        margin-right: 5;
-        float: left;
-        width: 33%;
-        height: 100%;
+      
+      
+       height: 100%;
+        width: 100%;
         background-color: skyblue;
 
     }
 
+    #second {
+      
+        
+        height: 100%;
+         width: 100%;
+         background-color: skyblue;
+ 
+     }
+
+     #third {
+      
+       
+        width: 100%;
+        height: 100%;
+         background-color: skyblue;
+ 
+     }
+
+  
 .header {
            color: white;
        }
@@ -116,21 +96,6 @@ html, body {
            max-height:50%;
            max-width: 100%;
        }
-
-    #second {
-        
-        margin-right: 5px;
-        float: left;
-        width: 33%;
-        height: 100%;
-    }
-
-    #third {
-        
-        float: left;
-        width: 33%;
-        height: 100%;
-    }
 
     img {
         max-width: 100%;
