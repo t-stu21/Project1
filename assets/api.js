@@ -18,20 +18,25 @@ console.log("test" + citySearched);
 
 // ajax call for leezair api
 // will need to change target id to match tylers
-$("#search-button").on("click", function display() {
+$("#drift-button").on("click", function display() {
 
-    $("#where-activities-go").empty();
+    $("#bottom_div").empty();
 
     console.log($("#city").val().trim());
     console.log($("#state").val().trim());
-
     var stateSearched = $("#state").val().trim();
     var citySearched = $("#city").val().trim();
-
+    
+  console.log(stateSearched);
+  console.log(citySearched);
     // var queryURL = "";
     var queryURL = "https://affiliate.api.leezair.com/v1/products?key=ca589a5d3fabeefcc4c9&country=United%20States&state=" + stateSearched + "&city=" + citySearched + "&distance=50&showFreeActivities=1&sort=popularity&limit=150&page=1";
+    
+    
+    
     console.log(queryURL);
-
+    console.log(stateSearched);
+    console.log(citySearched);
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -40,25 +45,63 @@ $("#search-button").on("click", function display() {
         console.log(results);
 
         results.forEach(function (result) {
-
-            var actDiv = $("<div>");
-
+            
+            var activeDiv = $("<div class='col-lg-3'>");
+            activeDiv.addClass("ui card")
+            activeDiv.attr("id='first'")
+           
             var activityTitle = result.title;
-            var activityRating = result.avgRating;
+            var description = "Drift"
+            
+            var rating = result.avgRating
+            
+            
+            
+            var title = $("<a>").html(activityTitle);
+            
+            title.addClass("header");
+           
+           
+            var displayDes = $("<a>")
+            displayDes.attr("href", result.productUrl);
+           
+            displayDes.addClass("description")
+            var displayRating = $("<div>").text(rating + "/ ouf of 5");
+            
+            displayRating.addClass("extra content");
+            var imageDiv = $("<img>");
+            //link.attr("href", result.productUrl);
 
-            var title = $("<p>").html(activityTitle);
-            var rating = $("<p>").text(activityRating + "/ ouf of 5");
+            imageDiv.addClass("image")
+            imageDiv.attr("src", result.coverImage);
+            displayRating.append(rating);
+            activeDiv.append(title, imageDiv, displayDes);
+            $(displayDes).append(description);
+            $("#bottom_div").append(activeDiv);
 
-            var link = $("<a>");
-            link.attr("href", result.productUrl);
+            activeDiv.css({
+                "background-color": "navy",
+                "margin-left": "5px",
+                "margin-right": "5px",
+                "margin-bottom": "0px",
+                "text-align": "center",
+                "width": "30%",
+                "height": "100%"
 
-            var activityImage = $("<img>");
-            activityImage.attr("src", result.coverImage);
+            })
 
-            link.append(activityImage);
-            actDiv.append(title, rating, link);
+            displayDes.css({
+                "font-size": "100px",
+                "color": "white",
+                "margin-top": "50px",
+                "font-family": "'Pacifico', cursive"
+            })
 
-            $("#where-activities-go").append(actDiv);
+            title.css({
+                
+                "color": "white",
+                "font-family": "'Pacifico', cursive"
+            })
 
         });
 
