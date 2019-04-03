@@ -26,6 +26,8 @@ html, body {
         width: 100%;
     }
 
+    
+
     input { 
         margin: 0 auto;
     }
@@ -58,6 +60,9 @@ html, body {
 
     }
 
+    #button-row {
+        width: 100%;
+    }
    
 
     #first {
