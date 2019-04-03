@@ -107,9 +107,10 @@ html, body {
         max-height: 100%;
     }
 
-    
-   
-   
+    .footer {
+        margin: 50px 0 50px 0;
+        color: white;
+    }
    
    
 
