@@ -6,10 +6,14 @@ $(document).ready(function () {
 
     $("#drift-button").on("click", function (event) {
         event.preventDefault();
+        $("#top_div").empty();
+        var cityLocation = $("#city").val().trim();
+        var stateLocation = $("#state").val().trim();
 
-        var cityLocation = $("#city-input").val().trim();
-        var stateLocation = $("#state-input").val().trim();
-
+        database.ref().set({
+            City: cityLocation,
+            State: stateLocation
+        });
 
         // var locationRef = database.ref("Location Info");
         // locationRef.child('City').set(cityLocation);
@@ -76,9 +80,9 @@ $(document).ready(function () {
                             var windUnit = response.DailyForecasts[i].Day.Wind.Speed.Unit;
                             var iconDescript = response.DailyForecasts[i].Day.LongPhrase;
 
+                            var date = moment(weathDate).format('LLLL');
 
-
-                            weatherAppd.append(iconDescript + weathDate + "<br>" + tempMin + tempMinUnit + "<br>" + tempMax + tempMaxUnit + "<br>" + windSpeed + windUnit + "<br>");
+                            weatherAppd.append(iconDescript + "<br>" + tempMin + tempMinUnit + "<br>" + tempMax + tempMaxUnit + "<br>" + windSpeed + windUnit + "<br>" + date);
                             $("#top_div").append(weatherAppd);
 
                         }
