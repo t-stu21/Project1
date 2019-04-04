@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
 
-    var database = firebase.database(); //firebase variable
+    // var database = firebase.database(); //firebase variable
     var weatherIconp = ''; //for weather icons
 
 
