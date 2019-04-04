@@ -2,24 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Drift</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--css-->
-    <link rel="stylesheet" href="drift.css">
-    <link rel="stylesheet" type="text/css" href="assets/Semantic-UI-CSS-master/semantic.css">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>-->
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-<!--<script src="assets/Semantic-UI-CSS-master/semantic.js"></script>-->
-<!----<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drift</title>
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>s
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--css-->
+  <link rel="stylesheet" href="drift.css">
+  <link rel="stylesheet" type="text/css" href="assets/Semantic-UI-CSS-master/semantic.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  
+  <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <!--<script src="assets/Semantic-UI-CSS-master/semantic.js"></script>-->
+  <!----<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
 
 
 
@@ -30,55 +32,46 @@
   <div class="row">
     <div class="weather col-sm-12" id="top_div">
 
-      
-            <div class="days" id="today">placeholder</div>
-            <div class="days" id="day2">placeholder</div>
-            <div class="days" id="day3">placeholder</div>
-            <div class="days" id="day4">placeholder</div>
-        
+
+
+
     </div>
-</div>
-    <div class="row">
+  </div>
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="jumbotron col-lg-6">
+
+      <h1 id="drift-header" class="display-4 text-center">Drift</h1>
+      <p class="lead text-center">Discovering places along the way</p>
+      <div class="row">
         <div class="col-lg-3"></div>
-          <div class="jumbotron col-lg-6">
-            
-        <h1 id="drift-header" class="display-4 text-center">Drift</h1>
-            <p class="lead text-center">Discovering places along the way</p>
-              <div class="row">
-                <div class="col-lg-3"></div>
-                   <form class="form-group text-center centered col-lg-3">
-                      <i class="fas fa-search" aria-hidden="true"></i>
-                         <input class="form-control text-center" type="text" placeholder="City"
-                    aria-label="Search" id="city"> 
-                           </form>
-                              <form class="form-group text-center centered col-lg-3">
-                          <i class="fas fa-search" aria-hidden="true"></i>
-                        <input class="form-control text-center" type="text" placeholder="State"
-                          aria-label="Search" id="state"> 
-                    </form>
-                       
-                <div class="col-lg-3"></div>
-            <div class="row" id="button-row">
+        <form class="form-group text-center centered col-lg-3">
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <input class="form-control text-center" type="text" placeholder="City" aria-label="Search" id="city">
+        </form>
+        <form class="form-group text-center centered col-lg-3">
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <input class="form-control text-center" type="text" placeholder="State" aria-label="Search" id="state">
+        </form>
+
+        <div class="col-lg-3"></div>
+        <div class="row" id="button-row">
           <div class="col-lg"></div>
-        <div class="btn-div col-lg text-center">
-      <button type="button" class="btn btn-outline-primary" id="drift-button">Drift Away</button>
+          <div class="btn-div col-lg text-center">
+            <button type="button" class="btn btn-outline-primary" id="drift-button">Drift Away</button>
           </div>
-            <div class="col-lg"></div>
-                       
-              </div>
-                     
-                </div>
-                  </div>
-                      
-                     </div>
-                      </div>
-                        </div>
-                          </div>
+          <div class="col-lg"></div>
 
+        </div>
 
-         <div id="bottom_div" class="row">
-          
-          <!-- <div class="activity col-lg-4">
+      </div>
+    </div>
+
+  </div>
+
+  <div id="bottom_div" class="row">
+
+    <!-- <div class="activity col-lg-4">
               <div id="first" class="tourist ui card">
                 <div class="image">
                   <img src="https://picsum.photos/1000">
@@ -97,12 +90,10 @@
                   <i class="user icon"></i>
                     
               </a>-->
-                
-          </div>
-       </div>
-    </div>
 
-           <!---- <div class="activity col-lg-4">
+  </div>
+  
+  <!---- <div class="activity col-lg-4">
               <div id="second" class="tourist ui card ">
                   <div class="image">
                     <img src="https://picsum.photos/1000">
@@ -148,34 +139,19 @@
                     </div>
                   </div>
                 </div>-->
-
-               
-
-               
-              
-
-
-</div>
-
-                    
+  </div>
 
 
 
-
-
-
-
-             
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Bootstrap JS -->
-    <script src="assets/api.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-   <!---- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/firebase.js"></script>
+  <script src="assets/api.js"></script>
+  <script src="assets/weatherlogic.js"></script>
+  
+  
+  <!---- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>-->
 </body>
