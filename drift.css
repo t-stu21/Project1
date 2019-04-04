@@ -2,6 +2,7 @@ html, body {
     margin:0;
     padding:0;
     height:100%;
+    
     }
     #top_div
     {
@@ -10,6 +11,17 @@ html, body {
       background-color:#009900;
       margin:auto;
       text-align:center;
+    }
+
+    #drift-header {
+        color: navy;
+        font-family: "Pacifico", cursive; 
+    }
+
+    #drift-button {
+        color: white;
+        background-color: navy;
+        font-family: "Pacifico", cursive;
     }
     
    .jumbotron {
@@ -25,6 +37,7 @@ html, body {
         padding-right: 0px;
         width: 100%;
     }
+
 
     
 
@@ -52,7 +65,9 @@ html, body {
 
     #bottom_div
     {
-      
+
+        text-align: center;
+      margin-left: 10px;
       height:300px;
       width:100%;
      
@@ -107,10 +122,10 @@ html, body {
         max-height: 100%;
     }
 
+    .footer {
+        margin: 50px 0 50px 0;
+        color: white;
+    }
+   
     
-   
-   
-   
-   
-
    
