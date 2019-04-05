@@ -39,7 +39,7 @@ $("#drift-button").on("click", function display() {
         results.forEach(function (result) {
 
             var activeDiv = $("<div class='col-lg-3'>");
-            activeDiv.addClass("ui card")
+            activeDiv.addClass("ui card slide-in-blurred-top")
             activeDiv.attr("id='first'")
 
             var activityTitle = result.title;
@@ -50,7 +50,7 @@ $("#drift-button").on("click", function display() {
 
 
             var title = $("<a>").html(activityTitle);
-
+            title.attr("href", result.productUrl)
             title.addClass("header");
 
 
@@ -62,7 +62,7 @@ $("#drift-button").on("click", function display() {
 
             displayRating.addClass("extra content");
             var imageDiv = $("<img>");
-            //link.attr("href", result.productUrl);
+            imageDiv.attr("href", result.productUrl);
 
             imageDiv.addClass("image")
             imageDiv.attr("src", result.coverImage);
@@ -93,8 +93,66 @@ $("#drift-button").on("click", function display() {
             title.css({
 
                 "color": "white",
-                "font-family": "'Pacifico', cursive"
+                "font-family": "'Titillium web', sans serif"
             })
+
+            if($(window).width() < 1024)
+{
+    displayDes.css({
+        "font-size": "50px",
+        "color": "white",
+                "margin-top": "50px",
+                "font-family": "'Pacifico', cursive"
+    })
+   // change functionality for smaller screens
+} else {
+    displayDes.css({
+        "font-size": "75px",
+        "color": "white",
+                "margin-top": "50px",
+                "font-family": "'Pacifico', cursive"
+    })
+   // change functionality for larger screens
+}
+
+if($(window).width() < 950)
+{
+    displayDes.css({
+        "font-size": "25px",
+        "color": "white",
+                "margin-top": "50px",
+                "font-family": "'Pacifico', cursive"
+    })
+   // change functionality for smaller screens
+} else {
+    displayDes.css({
+        "font-size": "50px",
+        "color": "white",
+                "margin-top": "50px",
+                "font-family": "'Pacifico', cursive"
+    })
+   // change functionality for larger screens
+}
+
+if($(window).width() < 650)
+{
+    console.log(window);
+    displayDes.css({
+        "font-size": "25px",
+        "color": "white",
+                "margin-top": "50px",
+                "font-family": "'Pacifico', cursive"
+    })
+   // change functionality for smaller screens
+} else {
+    displayDes.css({
+        "font-size": "25px",
+        "color": "white",
+                "margin-top": "50px",
+                "font-family": "'Pacifico', cursive"
+    })
+   // change functionality for larger screens
+}
         });
 
         
@@ -103,7 +161,5 @@ $("#drift-button").on("click", function display() {
     });
 
 });
-
-
 
 

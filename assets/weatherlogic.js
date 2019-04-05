@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var database = firebase.database(); //firebase variable
+   // var database = firebase.database(); //firebase variable
     var weatherIconp = ''; //for weather icons
 
 
@@ -10,10 +10,10 @@ $(document).ready(function () {
         var cityLocation = $("#city").val().trim();
         var stateLocation = $("#state").val().trim();
 
-        database.ref().set({
-            City: cityLocation,
-            State: stateLocation
-        });
+        //database.ref().set({
+        //    City: cityLocation,
+        //    State: stateLocation
+        //});
 
         // var locationRef = database.ref("Location Info");
         // locationRef.child('City').set(cityLocation);
@@ -65,7 +65,7 @@ $(document).ready(function () {
                             checkIcon();
                             //append weather icon
                             var weatherAppd = $("<div>");
-                            weatherAppd.addClass("days");
+                            weatherAppd.addClass("days slide-in-top");
                             var weatherIcondis = $("<img>")
                             weatherIcondis.attr("src", 'https://developer.accuweather.com/sites/default/files/' + weatherIconp + weatherIcon + '-s.png');
                             weatherAppd.append(weatherIcondis);
