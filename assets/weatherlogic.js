@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var database = firebase.database(); //firebase variable
+   // var database = firebase.database(); //firebase variable
     var weatherIconp = ''; //for weather icons
 
 
@@ -10,10 +10,10 @@ $(document).ready(function () {
         var cityLocation = $("#city").val().trim();
         var stateLocation = $("#state").val().trim();
 
-        database.ref().set({
-            City: cityLocation,
-            State: stateLocation
-        });
+        //database.ref().set({
+        //    City: cityLocation,
+        //    State: stateLocation
+        //});
 
 
         console.log(cityLocation);
@@ -63,11 +63,15 @@ $(document).ready(function () {
 
                             //div for weather 
                             var weatherAppd = $("<div>");
-                            weatherAppd.addClass("days");
+
+                            weatherAppd.addClass("days slide-in-top");
                             //p for weather data 
                             var contP = $("<p>");
                             contP.attr("class", "weathercontent");
                             //img to contain weather icon
+
+                           
+
                             var weatherIcondis = $("<img>")
                             weatherIcondis.attr("class", "align-self-start mr-3");
                             //construct image source url
