@@ -1,15 +1,3 @@
-// var config = {
-//     apiKey: "AIzaSyAdbLOzyRP7TX1AZ5Ero01bzzYJaz4WmUs",
-//     authDomain: "project-6a7dc.firebaseapp.com",
-//     databaseURL: "https://project-6a7dc.firebaseio.com",
-//     projectId: "project-6a7dc",
-//     storageBucket: "project-6a7dc.appspot.com",
-//     messagingSenderId: "119882092763"
-// };
-// firebase.initializeApp(config);
-
-// var database = firebase.database();
-
 // leezair api function (apiKey e843fcc14b1b0cfd6739)
 // need to incorporate firebase for recent searches
 var stateSearched = "";
@@ -30,14 +18,14 @@ $("#drift-button").on("click", function display() {
     console.log($("#state").val().trim());
     var stateSearched = $("#state").val().trim();
     var citySearched = $("#city").val().trim();
-    
-  console.log(stateSearched);
-  console.log(citySearched);
+
+    console.log(stateSearched);
+    console.log(citySearched);
     // var queryURL = "";
     var queryURL = "https://affiliate.api.leezair.com/v1/products?key=ca589a5d3fabeefcc4c9&country=United%20States&state=" + stateSearched + "&city=" + citySearched + "&distance=50&showFreeActivities=1&sort=popularity&limit=150&page=1";
-    
-    
-    
+
+
+
     console.log(queryURL);
     console.log(stateSearched);
     console.log(citySearched);
@@ -49,29 +37,29 @@ $("#drift-button").on("click", function display() {
         console.log(results);
 
         results.forEach(function (result) {
-            
+
             var activeDiv = $("<div class='col-lg-3'>");
             activeDiv.addClass("ui card")
             activeDiv.attr("id='first'")
-           
+
             var activityTitle = result.title;
             var description = "Drift"
-            
+
             var rating = result.avgRating
-            
-            
-            
+
+
+
             var title = $("<a>").html(activityTitle);
-            
+
             title.addClass("header");
-           
-           
+
+
             var displayDes = $("<a>")
             displayDes.attr("href", result.productUrl);
-           
+
             displayDes.addClass("description")
             var displayRating = $("<div>").text(rating + "/ ouf of 5");
-            
+
             displayRating.addClass("extra content");
             var imageDiv = $("<img>");
             //link.attr("href", result.productUrl);
@@ -103,7 +91,7 @@ $("#drift-button").on("click", function display() {
             })
 
             title.css({
-                
+
                 "color": "white",
                 "font-family": "'Pacifico', cursive"
             })
