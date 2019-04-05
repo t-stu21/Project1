@@ -1,85 +1,89 @@
+</html>
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Drift</title>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--css-->
     <link rel="stylesheet" href="drift.css">
 
     <link rel="stylesheet" type="text/css" href="assets/Semantic-UI-CSS-master/semantic.css">
-    <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>-->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+
+    
 <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
 <!--<script src="assets/Semantic-UI-CSS-master/semantic.js"></script>-->
-<!----<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
 
 
-=======
 
 
-</head>
 
-<body>
 
-<div class="row">
-    <div class="weather col-sm-12" id="top_div">
-      
-            <div class="days" id="today">placeholder</div>
-            <div class="days" id="day2">placeholder</div>
-            <div class="days" id="day3">placeholder</div>
-            <div class="days" id="day4">placeholder</div>
-        
-    </div>
-</div>
+
+  </head>
+
+  <body>
     <div class="row">
-        <div class="col-lg-3"></div>
-          <div class="jumbotron col-lg-6">
-            
-        <h1 class="display-4 text-center">Drift</h1>
-            <p class="lead text-center">Discovering places along the way</p>
-              <div class="row">
-                <div class="col-lg-3"></div>
-                   <form class="form-group text-center centered col-lg-3" id="city">
-                      <i class="fas fa-search" aria-hidden="true"></i>
-                         <input class="form-control text-center" type="text" placeholder="City"
-                    aria-label="Search"> 
-                           </form>
-                              <form class="form-group text-center centered col-lg-3" id="state">
-                          <i class="fas fa-search" aria-hidden="true"></i>
-                        <input class="form-control text-center" type="text" placeholder="State"
-                          aria-label="Search"> 
-                    </form>
-                       
-                <div class="col-lg-3"></div>
-            <div class="row" id="button-row">
-          <div class="col-lg"></div>
-        <div class="btn-div col-lg text-center">
-      <button type="button" class="btn btn-outline-primary" id="drift-button">Drift Away</button>
-          </div>
+      <div class="weather col-sm-12" id="top_div">
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="jumbotron col-lg-6">
+
+        <h1 id="drift-header" class="display-4 text-center">Drift</h1>
+        <p class="lead text-center">Discovering places along the way</p>
+        <div class="row">
+          <div class="col-lg-3"></div>
+          <form class="form-group text-center centered col-lg-3">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input class="form-control text-center" type="text" placeholder="City" aria-label="Search" id="city">
+          </form>
+          <form class="form-group text-center centered col-lg-3">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input class="form-control text-center" type="text" placeholder="State" aria-label="Search" id="state">
+          </form>
+
+          <div class="col-lg-3"></div>
+          <div class="row" id="button-row">
             <div class="col-lg"></div>
-                       
-              </div>
-                     
-                </div>
-                  </div>
-                      
-                     </div>
-                      </div>
-                        </div>
-                          </div>
+            <div class="btn-div col-lg text-center">
+              <button type="button" class="btn btn-outline-primary" id="drift-button">Drift Away</button>
+            </div>
+            <div class="col-lg"></div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
 
 
-         <div id="bottom_div" class="row">
-           <div class="activity col-lg-4">
-              <div id="first" class="tourist ui card ">
+    <div id="bottom_div" class="row">
+      <div class="wrapper">
+        <!-- <div class="activity col-lg-4">
+              <div id="first" class="tourist ui card">
                 <div class="image">
                   <img src="https://picsum.photos/1000">
                     </div>
@@ -95,14 +99,12 @@
                       <div class="extra content">
                      <a>
                   <i class="user icon"></i>
-                    150 likes
-              </a>
-                
-          </div>
-       </div>
-    </div>
+                    
+              </a>-->
 
-            <div class="activity col-lg-4">
+        <!-- </div>
+    </div> -->
+
               <div id="second" class="tourist ui card ">
                   <div class="image">
                     <img src="https://picsum.photos/1000">
@@ -147,15 +149,7 @@
                       </a>
                     </div>
                   </div>
-                </div>
-                  
-
-               
-              
-
-</div>
-
-                    
+                </div>-->
 
 
 
@@ -163,41 +157,21 @@
 
 
 
-             
-=======
-    <div id="top_div">Top- height is 25% of window height
-        <div>div class="jumbotron"></div>
     </div>
-    <div id="mid1_div">Middle 1 - height is 25% of window height
-        <div class="jumbotron">
-            <h1 class="display-4 text-center">Drift</h1>
-            <p class="lead text-center">Discovering places along the way</p>
-            <form class="form-inline">
-                <i class="fas fa-search" aria-hidden="true"></i>
-                <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-                    aria-label="Search">
-            </form>
-        </div>
-        <div id="mid2_div">Middle 2 - height is 25% of window height
-            <div class="jumbotron"></div>
-        </div>
-        <div id="bottom_div">Bottom - height is 25% of window height
-            <div>div class="jumbotron"></div>
-        </div>
-    
 
 
 
 
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-</body>
+
+
+    <script src="assets/api.js"></script>
+
+       <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!---- <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script> -->
+    <script type="text/javascript" src="assets/weatherlogic.js"></script>
+  
+  </body>
 
 </html>
