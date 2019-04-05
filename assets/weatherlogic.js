@@ -1,17 +1,19 @@
-
 $(document).ready(function () {
 
-    // var database = firebase.database(); //firebase variable
+   // var database = firebase.database(); //firebase variable
     var weatherIconp = ''; //for weather icons
 
 
     $("#drift-button").on("click", function (event) {
         event.preventDefault();
         $("#top_div").empty();
-
         var cityLocation = $("#city").val().trim();
         var stateLocation = $("#state").val().trim();
 
+        //database.ref().set({
+        //    City: cityLocation,
+        //    State: stateLocation
+        //});
 
         // var locationRef = database.ref("Location Info");
         // locationRef.child('City').set(cityLocation);
@@ -63,7 +65,7 @@ $(document).ready(function () {
                             checkIcon();
                             //append weather icon
                             var weatherAppd = $("<div>");
-                            weatherAppd.addClass("days");
+                            weatherAppd.addClass("days slide-in-top");
                             var weatherIcondis = $("<img>")
                             weatherIcondis.attr("src", 'https://developer.accuweather.com/sites/default/files/' + weatherIconp + weatherIcon + '-s.png');
                             weatherAppd.append(weatherIcondis);
@@ -78,9 +80,9 @@ $(document).ready(function () {
                             var windUnit = response.DailyForecasts[i].Day.Wind.Speed.Unit;
                             var iconDescript = response.DailyForecasts[i].Day.LongPhrase;
 
+                            var date = moment(weathDate).format('LLLL');
 
-
-                            weatherAppd.append(iconDescript + weathDate + "<br>" + tempMin + tempMinUnit + "<br>" + tempMax + tempMaxUnit + "<br>" + windSpeed + windUnit + "<br>");
+                            weatherAppd.append(iconDescript + "<br>" + tempMin + tempMinUnit + "<br>" + tempMax + tempMaxUnit + "<br>" + windSpeed + windUnit + "<br>" + date);
                             $("#top_div").append(weatherAppd);
 
                         }
@@ -106,3 +108,4 @@ $(document).ready(function () {
     }
         ,)
 })
+
