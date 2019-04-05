@@ -4,6 +4,10 @@ var stateSearched = "";
 var citySearched = "";
 console.log("test" + citySearched);
 
+
+
+
+
 // ajax call for leezair api
 // will need to change target id to match tylers
 $("#drift-button").on("click", function display() {
@@ -92,6 +96,9 @@ $("#drift-button").on("click", function display() {
                 "font-family": "'Pacifico', cursive"
             })
         });
+
+        
+
 
     });
 
