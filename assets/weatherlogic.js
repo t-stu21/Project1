@@ -66,6 +66,7 @@ $(document).ready(function () {
                             weatherAppd.addClass("days");
                             //p for weather data 
                             var contP = $("<p>");
+
                             contP.attr("class", "weathercontent");
                             //img to contain weather icon
                             var weatherIcondis = $("<img>")
@@ -88,15 +89,18 @@ $(document).ready(function () {
                             var windSpeed = response.DailyForecasts[i].Day.Wind.Speed.Value;
                             var windUnit = response.DailyForecasts[i].Day.Wind.Speed.Unit;
                             var iconDescript = response.DailyForecasts[i].Day.IconPhrase;
+
                             //date format 
-                            var date = moment(weathDate).format('L');
+                            var date = moment(weathDate).format('dddd MMM Do');
+                            var smdate = moment(weathDate).format('ddd');
                             //append created variables to weather data paragraph
-                            contP.append("<br>" + iconDescript + "</text>" + "<br>" + "<b>Min Temp: </b>" + tempMin + tempMinUnit + "<br>" + "<b>Max Temp: </b>" + tempMax + tempMaxUnit + "<br>" + "<b>Wind: </b>" + windSpeed + windUnit + "<br>" + date);
+                            contP.append(iconDescript + "<br>" + "<b>Min Temp: </b>" + tempMin + tempMinUnit + "<br>" + "<b>Max Temp: </b>" + tempMax + tempMaxUnit + "<br>" + "<b>Wind: </b>" + windSpeed + windUnit + "<br>" + date);
                             $("#top_div").append(weatherAppd);
                             //paragraph to display temp only when screen is small 
                             var smallDisp = $("<p>");
                             smallDisp.attr("class", "smalldisplay");
                             smallDisp.append("<h4>" + tempMax + "°" + "</h4>");
+                            smallDisp.append(smdate);
                             weatherAppd.append(smallDisp);
                         }
                         //function to check if icon needs a 0 
