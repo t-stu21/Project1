@@ -68,10 +68,11 @@ $("#drift-button").on("click", function display() {
             $("#bottom_div").append(activeDiv);
 
             activeDiv.css({
+                "margin-top": "0px",
                 "background-color": "navy",
-                "margin-left": "5px",
+                "margin-left": "85px",
                 "margin-right": "5px",
-                "margin-bottom": "0px",
+                "margin-bottom": "10px",
                 "text-align": "center",
                 "width": "30%",
                 "height": "100%"
@@ -90,7 +91,6 @@ $("#drift-button").on("click", function display() {
                 "color": "white",
                 "font-family": "'Pacifico', cursive"
             })
-
         });
 
     });

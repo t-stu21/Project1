@@ -1,3 +1,46 @@
+@media screen and (max-width: 1024px) {
+    .description {
+        font-size: 50px;
+    }
+    
+    }
+    
+    @media screen and (max-width: 950px) {
+        .description {
+            font-size: 50px;
+        }
+    
+    }
+    
+    
+    @media screen and (max-width: 650px) {
+        .description {
+            font-size: 25px;
+        }
+    
+    
+    }
+    
+    @media screen and (max-width: 480px) {
+        .description {
+            font-size: 25px;
+        }
+    
+    }
+
+    @media screen and (min-width: 700px) {
+        #top_div
+        {
+          height: 20%;
+        
+        }
+    }
+
+
+
+
+
+
 html, body {
     margin:0;
     padding:0;
@@ -6,11 +49,13 @@ html, body {
     }
     #top_div
     {
-      height:200px;
+      height:auto;
       width:100%;
       background-color:white;
-      margin:auto;
+      margin:10px;
       text-align:center;
+      
+     
     }
 
     #drift-header {
@@ -50,14 +95,20 @@ html, body {
         width: 100%;
     }
     
-   .days {
-        border-style: solid;
-        border-width: 5px;
-        border-color: black;
+    .days {
         float: left;
-        width: 25%;
-        height: 100%;
+        width: 20%;
+        height: auto;
+        text-align: center;
+        margin-top: 10px;
     }
+    .smalldisplay {
+        text-align: center;
+
+    }
+
+  
+
 
     .row {
         margin: 0;
