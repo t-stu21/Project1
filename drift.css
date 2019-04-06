@@ -2,15 +2,22 @@ html, body {
     margin:0;
     padding:0;
     height:100%;
+
     
     }
     #top_div
     {
-      height:200px;
+      margin-top: 0px;
+      margin-left: 0px;
+      height:auto;
       width:100%;
-      background-color:white;
-      margin:auto;
+
+      background-color:skyblue;
+      box-shadow: #5f5f5e;
       text-align:center;
+
+      
+     
     }
 
     #drift-header {
@@ -38,7 +45,9 @@ html, body {
         width: 100%;
     }
 
-
+   .col-sm-10 {
+     text-align: center;
+   }
     
 
     input { 
@@ -50,14 +59,20 @@ html, body {
         width: 100%;
     }
     
-   .days {
-        border-style: solid;
-        border-width: 5px;
-        border-color: black;
+    .days {
         float: left;
-        width: 25%;
-        height: 100%;
+        width: 20%;
+        height: auto;
+        text-align: center;
+        margin-top: 10px;
     }
+    .smalldisplay {
+        text-align: center;
+
+    }
+
+  
+
 
     .row {
         margin: 0;
@@ -85,9 +100,11 @@ html, body {
       
        height: 100%;
         width: 100%;
+
         background-color: skyblue;
 
     }
+
 
     #second {
       
@@ -108,6 +125,7 @@ html, body {
      }
 
   
+
 .header {
            color: white;
        }
@@ -116,6 +134,7 @@ html, body {
            max-height:50%;
            max-width: 100%;
        }
+
 
     img {
         max-width: 100%;
@@ -129,6 +148,7 @@ html, body {
 
 
     .slide-in-blurred-top {
+        
         -webkit-animation: slide-in-blurred-top 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
                 animation: slide-in-blurred-top 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
     }
@@ -186,7 +206,7 @@ html, body {
 
   .ui:hover {
     box-shadow: 0 10px #5f5f5e;
-    top: 6px;
+    top: 2px;
 }
 
 .ui:active {
@@ -196,8 +216,8 @@ html, body {
   
 
 .slide-in-top {
-	-webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: slide-in-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 /* ----------------------------------------------
@@ -235,3 +255,49 @@ html, body {
     }
   }
   
+.carousel-control-next {
+  background-color: black;
+}
+
+
+  
+
+
+    .carousel-item {
+        margin:0;
+        padding:0;
+        height:100%;
+        }
+   /*
+    .carousel-inner .item {
+        width :100%;
+        height: 400px;
+    }
+
+    .carousel-inner > .next {
+        display: none;
+     }
+     .carousel-inner > .prev {
+        display: none;
+     }
+
+    .carousel-inner>.item{
+        /*disables white flash*//*
+        -webkit-transition: -webkit-transform .5s ease-in-out;
+        -o-transition: -o-transform .5s ease-in-out;
+        transition: transform .5s ease-in-out;
+     }
+
+    @media (min-width: 768px) {
+        .d-md-block {
+           display: block;
+        }
+      }
+      
+      .d-none {
+           display: none;
+      }
+
+    
+    
+

@@ -38,9 +38,9 @@ $("#drift-button").on("click", function display() {
 
         results.forEach(function (result) {
 
-            var activeDiv = $("<div class='col-lg-3'>");
+            var activeDiv = $("<a class='col-lg-3'>");
             activeDiv.addClass("ui card slide-in-blurred-top")
-            activeDiv.attr("id='first'")
+            activeDiv.attr("href", result.productUrl)
 
             var activityTitle = result.title;
             var description = "Drift"
@@ -161,5 +161,6 @@ if($(window).width() < 650)
     });
 
 });
+
 
 

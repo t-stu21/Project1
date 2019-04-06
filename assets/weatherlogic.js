@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-   // var database = firebase.database(); //firebase variable
+    // var database = firebase.database(); //firebase variable
     var weatherIconp = ''; //for weather icons
 
 
@@ -14,10 +14,6 @@ $(document).ready(function () {
         //    City: cityLocation,
         //    State: stateLocation
         //});
-
-        // var locationRef = database.ref("Location Info");
-        // locationRef.child('City').set(cityLocation);
-        // locationRef.child('State').set(stateLocation);
 
 
         console.log(cityLocation);
@@ -39,9 +35,10 @@ $(document).ready(function () {
                 var locationKeyNew = locationResponse[0].Key;
 
                 //forecast URL
-                var forecast = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/" + locationKeyNew + "?apikey=113LBdVIIvDY0K9ZzAPIvjkrbVShUugG&language=en-us&details=true&metric=false/";
-
-
+                var forecast = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/" + locationKeyNew + "?apikey=4Q9DJCTVu2oLZ5wB2LArLIjGUSqzYlLm&language=en-us&details=true&metric=false/";
+                //second key 	4Q9DJCTVu2oLZ5wB2LArLIjGUSqzYlLm
+                //key 1 113LBdVIIvDY0K9ZzAPIvjkrbVShUugG
+                //get forecast response
                 $.ajax({
                     url: forecast,
                     method: "GET"
@@ -50,7 +47,7 @@ $(document).ready(function () {
                         var forecastResponse = response;
                         console.log(forecastResponse);
                         //added -1 in for loop to reduce number of days shown from 5 to 4 
-                        for (var i = 0; i < response.DailyForecasts.length - 1; i++) {
+                        for (var i = 0; i < response.DailyForecasts.length; i++) {
 
                             //ensuring data is returning correctly
                             console.log(response.DailyForecasts[i].Date);
@@ -59,18 +56,38 @@ $(document).ready(function () {
                             console.log(response.DailyForecasts[i].Day.Wind.Speed.Value);
                             console.log(response.DailyForecasts[i].Day.Wind.Speed.Unit);
                             console.log(response.DailyForecasts[i].Day.Icon);
-                            // creating variables from response data
+
                             var weatherIcon = response.DailyForecasts[i].Day.Icon;
 
+                            //check if weather icon needs a 0
                             checkIcon();
-                            //append weather icon
+
+                            //div for weather 
                             var weatherAppd = $("<div>");
+
                             weatherAppd.addClass("days slide-in-top");
+                            //p for weather data 
+                            var contP = $("<p>");
+
+                            contP.attr("class", "weathercontent");
+                            //img to contain weather icon
+
+
+
                             var weatherIcondis = $("<img>")
+                            weatherIcondis.attr("class", "align-self-start mr-3");
+                            //construct image source url
                             weatherIcondis.attr("src", 'https://developer.accuweather.com/sites/default/files/' + weatherIconp + weatherIcon + '-s.png');
+                            //append weather image to div
                             weatherAppd.append(weatherIcondis);
+                            //append weather data to div
+                            weatherAppd.append(contP);
                             console.log(weatherAppd);
 
+                            
+
+
+                            //variables for weather display
                             var weathDate = response.DailyForecasts[i].Date;
                             var tempMin = response.DailyForecasts[i].Temperature.Minimum.Value;
                             var tempMax = response.DailyForecasts[i].Temperature.Maximum.Value;
@@ -78,15 +95,22 @@ $(document).ready(function () {
                             var tempMaxUnit = response.DailyForecasts[i].Temperature.Minimum.Unit;
                             var windSpeed = response.DailyForecasts[i].Day.Wind.Speed.Value;
                             var windUnit = response.DailyForecasts[i].Day.Wind.Speed.Unit;
-                            var iconDescript = response.DailyForecasts[i].Day.LongPhrase;
+                            var iconDescript = response.DailyForecasts[i].Day.IconPhrase;
 
-                            var date = moment(weathDate).format('LLLL');
-
-                            weatherAppd.append(iconDescript + "<br>" + tempMin + tempMinUnit + "<br>" + tempMax + tempMaxUnit + "<br>" + windSpeed + windUnit + "<br>" + date);
+                            //date format 
+                            var date = moment(weathDate).format('dddd MMM Do');
+                            var smdate = moment(weathDate).format('ddd');
+                            //append created variables to weather data paragraph
+                            contP.append(iconDescript + "<br>" + "<b>Min Temp: </b>" + tempMin + tempMinUnit + "<br>" + "<b>Max Temp: </b>" + tempMax + tempMaxUnit + "<br>" + "<b>Wind: </b>" + windSpeed + windUnit + "<br>" + date);
                             $("#top_div").append(weatherAppd);
-
+                            //paragraph to display temp only when screen is small 
+                            var smallDisp = $("<p>");
+                            smallDisp.attr("class", "smalldisplay");
+                            smallDisp.append("<h4>" + tempMax + "°" + "</h4>");
+                            smallDisp.append(smdate);
+                            weatherAppd.append(smallDisp);
                         }
-                        //check if url needs 0 before icon 
+                        //function to check if icon needs a 0 
                         function checkIcon() {
 
                             if (JSON.stringify(weatherIcon) < 9) {
@@ -96,9 +120,25 @@ $(document).ready(function () {
                             }
                             console.log(weatherIconp);
                         }
+                        //function to hide or show data based on windown width
+                        function media(win) {
 
+                            if (win.matches) { // If media query matches
+                                $(".weathercontent").hide();
+                                $(".smalldisplay").show();
+                            } else {
 
-                    })
+                                $(".weathercontent").show();
+                                $(".smalldisplay").hide();
+                            }
+                        }
+
+                        var win = window.matchMedia("(max-width: 700px)")
+                        media(win) // Call listener function at run time
+                        win.addListener(media)
+
+                    }
+                    )
             }
 
                     ,
