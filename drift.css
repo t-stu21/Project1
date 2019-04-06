@@ -259,25 +259,21 @@ html, body {
   background-color: black;
 }
 
-
-  
-
-
-    /*.carousel-item {
+    .carousel-item {
         margin:0;
         padding:0;
         height:100%;
         }
    
-    .carousel-inner .item {
+    .carousel-inner7 .item {
         width :100%;
         height: 400px;
     }
 
-    .carousel-inner > .next {
+    .carousel-inner7 > .next {
         display: none;
      }
-     .carousel-inner > .prev {
+     .carousel-inner7 > .prev {
         display: none;
      }
 
@@ -297,7 +293,7 @@ html, body {
       .d-none {
            display: none;
       }
-*/
+
     
     
 
