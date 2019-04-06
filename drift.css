@@ -54,7 +54,10 @@ html, body {
         margin: 0 auto;
     }
 
-  
+  .invalid {
+      border-color: #d10c0c;
+      background-color: #ff9191;
+  }
     .weather {
         width: 100%;
     }

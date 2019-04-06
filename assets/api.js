@@ -19,9 +19,14 @@ $("#drift-button").on("click", function display() {
     var stateSearched = $("#state").val().trim();
     var citySearched = $("#city").val().trim();
 
+    if (citySearched && stateSearched) {
+        getEvent();
+    }
     console.log(stateSearched);
     console.log(citySearched);
     // var queryURL = "";
+
+    function getEvent (){
     var queryURL = "https://affiliate.api.leezair.com/v1/products?key=ca589a5d3fabeefcc4c9&country=United%20States&state=" + stateSearched + "&city=" + citySearched + "&distance=50&showFreeActivities=1&sort=popularity&limit=150&page=1";
 
 
@@ -154,13 +159,13 @@ if($(window).width() < 650)
    // change functionality for larger screens
 }
         });
+    
+    },
 
-        
 
+    );
 
-    });
-
-});
+}});
 
 
 
