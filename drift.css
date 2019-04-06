@@ -10,12 +10,11 @@ html, body {
       margin-left: 0px;
       height:auto;
       width:100%;
-      background-color:white;
-      margin:10px;
-      text-align: center;
-      /* background-color:skyblue;
+
+      background-color:skyblue;
       box-shadow: #5f5f5e;
-      text-align:center; */
+      text-align:center;
+
       
      
     }
@@ -254,7 +253,9 @@ html, body {
     }
   }
   
-
+.carousel-control-next {
+  background-color: black;
+}
 
 
   
