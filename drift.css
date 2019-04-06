@@ -248,7 +248,9 @@ html, body {
     }
   }
   
-
+.carousel-control-next {
+  background-color: black;
+}
 
 
   
