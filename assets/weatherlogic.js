@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-   // var database = firebase.database(); //firebase variable
+    // var database = firebase.database(); //firebase variable
     var weatherIconp = ''; //for weather icons
 
 
@@ -35,8 +35,9 @@ $(document).ready(function () {
                 var locationKeyNew = locationResponse[0].Key;
 
                 //forecast URL
-                var forecast = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/" + locationKeyNew + "?apikey=113LBdVIIvDY0K9ZzAPIvjkrbVShUugG&language=en-us&details=true&metric=false/";
-
+                var forecast = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/" + locationKeyNew + "?apikey=4Q9DJCTVu2oLZ5wB2LArLIjGUSqzYlLm&language=en-us&details=true&metric=false/";
+                //second key 	4Q9DJCTVu2oLZ5wB2LArLIjGUSqzYlLm
+                //key 1 113LBdVIIvDY0K9ZzAPIvjkrbVShUugG
                 //get forecast response
                 $.ajax({
                     url: forecast,
@@ -71,7 +72,7 @@ $(document).ready(function () {
                             contP.attr("class", "weathercontent");
                             //img to contain weather icon
 
-                           
+
 
                             var weatherIcondis = $("<img>")
                             weatherIcondis.attr("class", "align-self-start mr-3");
