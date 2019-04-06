@@ -6,11 +6,12 @@ html, body {
     }
     #top_div
     {
+      margin-top: 0px;
+      margin-left: 0px;
       height:auto;
       width:100%;
       background-color:skyblue;
       box-shadow: #5f5f5e;
-      margin:10px;
       text-align:center;
       
      
@@ -41,7 +42,9 @@ html, body {
         width: 100%;
     }
 
-
+   .col-sm-10 {
+     text-align: center;
+   }
     
 
     input { 

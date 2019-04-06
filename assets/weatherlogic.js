@@ -82,6 +82,8 @@ $(document).ready(function () {
                             weatherAppd.append(contP);
                             console.log(weatherAppd);
 
+                            
+
 
                             //variables for weather display
                             var weathDate = response.DailyForecasts[i].Date;
