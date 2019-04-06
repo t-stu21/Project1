@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Drift</title>
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drift</title>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -19,25 +19,19 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 
-    
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-<!--<script src="assets/Semantic-UI-CSS-master/semantic.js"></script>-->
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <!--<script src="assets/Semantic-UI-CSS-master/semantic.js"></script>-->
 
 
 
 
+</head>
 
-
-
-  </head>
-
-  <body>
-    <div class="row">
-      <div class="weather col-sm-12 slide-in-top" id="top_div">
-
+<body>
+  <div class="row">
+    <div class="weather col-sm-12" id="top_div">
 
 
 
@@ -125,16 +119,12 @@
             </div>
             <div class="col-lg"></div>
 
-          </div>
-
-        </div>
-      </div>
-
     </div>
-    </div>
-    </div>
-    </div>
-
+  </div>
+  
+  <div class="results"></div>
+    <h2 id="city-display"></h2>
+    <h2 id="state-display"></h2>
 
     <div id="bottom_div" class="row">
         
@@ -210,6 +200,8 @@
                   </div>
                 </div>-->
 
+  </div>
+
 
 
 
@@ -225,7 +217,7 @@
 
 
     
-    
+    <script src="assets/firebase-search-results.js"></script>
     <script src="assets/api.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <script src="assets/weatherlogic.js"></script>
