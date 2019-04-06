@@ -263,12 +263,12 @@ html, body {
   
 
 
-    /*.carousel-item {
+    .carousel-item {
         margin:0;
         padding:0;
         height:100%;
         }
-   
+   /*
     .carousel-inner .item {
         width :100%;
         height: 400px;
@@ -282,7 +282,7 @@ html, body {
      }
 
     .carousel-inner>.item{
-        /*disables white flash*/
+        /*disables white flash*//*
         -webkit-transition: -webkit-transform .5s ease-in-out;
         -o-transition: -o-transform .5s ease-in-out;
         transition: transform .5s ease-in-out;
@@ -297,7 +297,7 @@ html, body {
       .d-none {
            display: none;
       }
-*/
+
     
     
 

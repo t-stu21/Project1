@@ -39,7 +39,7 @@ $("#drift-button").on("click", function display() {
         results.forEach(function (result) {
 
             var activeDiv = $("<a class='col-lg-3'>");
-            activeDiv.addClass("ui card slide-in-blurred-top carousel-item")
+            activeDiv.addClass("ui card slide-in-blurred-top")
             activeDiv.attr("href", result.productUrl)
 
             var activityTitle = result.title;
@@ -64,12 +64,12 @@ $("#drift-button").on("click", function display() {
             var imageDiv = $("<img>");
             imageDiv.attr("href", result.productUrl);
 
-            imageDiv.addClass("image-top")
+            imageDiv.addClass("image")
             imageDiv.attr("src", result.coverImage);
             displayRating.append(rating);
-            activeDiv.append(imageDiv, title, displayDes);
+            activeDiv.append(title, imageDiv, displayDes);
             $(displayDes).append(description);
-            $(".carousel-inner").append(activeDiv);
+            $("#bottom_div").append(activeDiv);
 
             activeDiv.css({
                 "margin-top": "0px",
@@ -78,8 +78,8 @@ $("#drift-button").on("click", function display() {
                 "margin-right": "5px",
                 "margin-bottom": "10px",
                 "text-align": "center",
-                "width": "25%",
-                "height": "50%"
+                "width": "30%",
+                "height": "100%"
 
             })
 
