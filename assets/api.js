@@ -72,12 +72,12 @@ $("#drift-button").on("click", function display() {
             imageDiv.addClass("image")
             imageDiv.attr("src", result.coverImage);
             displayRating.append(rating);
-            activeDiv.append(title, imageDiv, displayDes);
+            activeDiv.append(imageDiv, title);
             $(displayDes).append(description);
             $("#bottom_div").append(activeDiv);
 
             activeDiv.css({
-                "margin-top": "0px",
+                "margin-top": "5px",
                 "background-color": "navy",
                 "margin-left": "85px",
                 "margin-right": "5px",
@@ -158,14 +158,38 @@ if($(window).width() < 650)
     })
    // change functionality for larger screens
 }
-        });
+
+function media(win) {
+
+    if (win.matches) { // If media query matches
+        activeDiv.css({
+            "margin-top": "5px",
+            "background-color": "navy",
+            "margin-left": "2px",
+            "margin-right": "2px",
+            "margin-bottom": "10px",
+            "text-align": "center",
+            "width": "95%",
+            "height": "100%"
+
+        })
+
+    } 
+}
+
+var win = window.matchMedia("(max-width: 700px)")
+media(win) // Call listener function at run time
+win.addListener(media)
+
+}
+        ,);
     
     },
 
 
     );
 
-}});
+}})
 
 
 
