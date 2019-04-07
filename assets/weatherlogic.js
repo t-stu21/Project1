@@ -39,6 +39,12 @@ $(document).ready(function () {
                         $("#state").removeClass('invalid');
                     });
                     }
+                    else {
+                        $("#city")||$("#state");
+                        animate("#city"), "heartBeat", _=>{
+                    
+                        }
+                    }
                 }
                     
       
