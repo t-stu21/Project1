@@ -12,6 +12,8 @@ var database = firebase.database();
 
 var citySearched = "";
 var stateSearched = "";
+var firstFive = [];
+var desThis = [];
 
 $("#drift-button").on("click", function (event) {
 
@@ -27,29 +29,37 @@ $("#drift-button").on("click", function (event) {
   console.log(citySearched);
   console.log(stateSearched);
 
-  var results = {
+
+
+  var results = [{
     city: citySearched,
     state: stateSearched,
     dateAdded: firebase.database.ServerValue.TIMESTAMP
-  };
+  }];
 
   database.ref("searched").push(results);
-
+//console.log("1" + results, results.city[1], results.state[1]);
 });
 
-database.ref("searched").limitToLast(5).on("child_added", function (childSnapshot) {
-console.log(childSnapshot.val().city);
-console.log(childSnapshot.val().state);
+//database.ref("searched").limitToLast(5).on("value", function (childSnapshot) {
  
-   $(".results").prepend("<div class='result'><span class='c'> " + childSnapshot.val().city +
-   "</span><span class='s'>" + childSnapshot.val().state + "</span></div>"),
-   
-  function(errorObject) {
-    console.log("errors handled: " + errorObject.code);
-  };
-  });
+  console.log('childSnapshot',childSnapshot.val())
 
-  database.ref("searched").orderByChild("dataAdded").on("child_added", function(snapshot) {
-    $("#city-display").text(snapshot.val().city);
-    $("#state-display").text(snapshot.val().state);
-  });
+  console.log("childsnapshot:"+childSnapshot.val().city)
+
+
+    //$('.results').empty();
+
+
+   //$(".results").prepend("<div class='result'><span class='c'> " + childSnapshot.val().city +
+   //"</span><span class='s'>" + childSnapshot.val().state + "</span></div>"),
+   
+  //function(errorObject) {
+  //  console.log("errors handled: " + errorObject.code);
+  //};
+  //});
+
+  //database.ref("searched").orderByChild("dataAdded").on("child_added", function(snapshot) {
+   /// $("#city-display").text(snapshot.val().city);
+   // $("#state-display").text(snapshot.val().state);
+  //});

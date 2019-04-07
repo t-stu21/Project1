@@ -59,7 +59,7 @@ $("#drift-button").on("click", function display() {
             title.addClass("header");
 
 
-            var displayDes = $("<a>")
+            var displayDes = $("<div>")
             displayDes.attr("href", result.productUrl);
 
             displayDes.addClass("description")
@@ -72,7 +72,11 @@ $("#drift-button").on("click", function display() {
             imageDiv.addClass("image")
             imageDiv.attr("src", result.coverImage);
             displayRating.append(rating);
+<<<<<<< HEAD
             activeDiv.append(imageDiv, title);
+=======
+            activeDiv.append(imageDiv, title, displayDes);
+>>>>>>> 167cc4652bf6a693a55602c26d1e593e8467dd3c
             $(displayDes).append(description);
             $("#bottom_div").append(activeDiv);
 
@@ -84,21 +88,25 @@ $("#drift-button").on("click", function display() {
                 "margin-bottom": "10px",
                 "text-align": "center",
                 "width": "30%",
-                "height": "100%"
+                "height": "100%",
+                "bottom": "20px"
 
             })
 
             displayDes.css({
-                "font-size": "100px",
+                "font-size": "10px",
                 "color": "white",
                 "margin-top": "50px",
                 "font-family": "'Pacifico', cursive"
             })
 
             title.css({
-
+                 "font-size": "15px",
                 "color": "white",
                 "font-family": "'Titillium web', sans serif"
+            })
+            imageDiv.css ({
+                "height": "100%"
             })
 
             if($(window).width() < 1024)
