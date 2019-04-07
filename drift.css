@@ -2,8 +2,15 @@ html, body {
     margin:0;
     padding:0;
     height:100%;
-
+    width: 100%;
     
+    }
+
+    #carouselFluid {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
     #top_div
     {
@@ -21,7 +28,7 @@ html, body {
     }
 
     #drift-header {
-        color: navy;
+        color: white;
         font-family: "Pacifico", cursive; 
     }
 
@@ -32,6 +39,7 @@ html, body {
     }
     
    .jumbotron {
+       
        margin-bottom: 0;
        background-color: transparent;
    }
@@ -80,11 +88,13 @@ html, body {
 
     #bottom_div
     {
-
-        text-align: center;
+      margin-top: 0px;
+      text-align: center;
+      margin-right: 10px;
       margin-left: 10px;
-      height:300px;
+      height:250px;
       width:100%;
+     
      
       
 
@@ -255,49 +265,8 @@ html, body {
     }
   }
   
-.carousel-control-next {
-  background-color: black;
-}
 
 
-  
-
-
-    .carousel-item {
-        margin:0;
-        padding:0;
-        height:100%;
-        }
-   /*
-    .carousel-inner .item {
-        width :100%;
-        height: 400px;
-    }
-
-    .carousel-inner > .next {
-        display: none;
-     }
-     .carousel-inner > .prev {
-        display: none;
-     }
-
-    .carousel-inner>.item{
-        /*disables white flash*//*
-        -webkit-transition: -webkit-transform .5s ease-in-out;
-        -o-transition: -o-transform .5s ease-in-out;
-        transition: transform .5s ease-in-out;
-     }
-
-    @media (min-width: 768px) {
-        .d-md-block {
-           display: block;
-        }
-      }
-      
-      .d-none {
-           display: none;
-      }
-
-    
+       
     
 
