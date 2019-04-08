@@ -13,6 +13,30 @@ var database = firebase.database();
 var citySearched = "";
 var stateSearched = "";
 
+
+
+function snapshotToArray(snapshot) {
+  var returnArr = [];
+
+  snapshot.forEach(function(childSnapshot) {
+      var item = childSnapshot.val();
+
+      returnArr.push(item);
+  });
+
+  return returnArr;
+
+};
+
+firebase.database().ref('searched').on('value', function(snapshot) {
+console.log(snapshotToArray(snapshot));
+
+var test = snapshotToArray(snapshot);
+
+$(".results").text(test);
+
+});
+
 $("#drift-button").on("click", function (event) {
 
   event.preventDefault();
@@ -20,36 +44,32 @@ $("#drift-button").on("click", function (event) {
   citySearched = $("#city").val().trim();
   stateSearched = $("#state").val().trim();
 
-  // var locationRef = database.ref("top-five");
-  // locationRef.child('city').push(citySearched);
-  // locationRef.child('state').push(stateSearched);
-
   console.log(citySearched);
   console.log(stateSearched);
 
   var results = {
     city: citySearched,
     state: stateSearched,
-    dateAdded: firebase.database.ServerValue.TIMESTAMP
   };
 
   database.ref("searched").push(results);
 
 });
 
-database.ref("searched").limitToLast(5).on("child_added", function (childSnapshot) {
-console.log(childSnapshot.val().city);
-console.log(childSnapshot.val().state);
- 
-   $(".results").prepend("<div class='result'><span class='c'> " + childSnapshot.val().city +
-   "</span><span class='s'>" + childSnapshot.val().state + "</span></div>"),
-   
-  function(errorObject) {
-    console.log("errors handled: " + errorObject.code);
-  };
-  });
+// database.ref("searched").on("value", function (childSnapshot) {
+// console.log(childSnapshot.val().city);
+// console.log(childSnapshot.val().state);
 
-  database.ref("searched").orderByChild("dataAdded").on("child_added", function(snapshot) {
-    $("#city-display").text(snapshot.val().city);
-    $("#state-display").text(snapshot.val().state);
-  });
+//    $(".results").prepend("<div class='result'><span class='c'> " + childSnapshot.val().city +
+//    "</span><span class='s'>" + childSnapshot.val().state + "</span></div>"),
+   
+//   function(errorObject) {
+//     console.log("errors handled: " + errorObject.code);
+//   };
+//   });
+
+//   database.ref("searched").on("child_added", function(snapshot) {
+//     $("#city-display").text(snapshot.val().city);
+//     $("#state-display").text(snapshot.val().state);
+//   });
+
