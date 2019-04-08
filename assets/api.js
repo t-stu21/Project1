@@ -12,7 +12,7 @@ console.log("test" + citySearched);
 // will need to change target id to match tylers
 $("#drift-button").on("click", function display() {
 
-    $("#bottom_div").empty();
+    $("#cards").empty();
 
     console.log($("#city").val().trim());
     console.log($("#state").val().trim());

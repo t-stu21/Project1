@@ -60,7 +60,7 @@ html, body {
   }
   .results-header {
     color: white;
-    background-color: navy;
+    background-color: #5f5f5e;
     font-family: "Pacifico", cursive;
   }
 
@@ -143,7 +143,8 @@ html, body {
   width: 100%;
   overflow: auto;
  text-align: center;
-
+ margin-left: 15px;
+ bottom: 15px;
 }
 @media only screen and (max-width: 700px) {
   #cardholder {
@@ -158,6 +159,11 @@ html, body {
     height: 250px;
     overflow: auto;
     margin-left:10px;
+  }
+
+  .card {
+    width: 90px;
+    height: 100x;
   }
 }
 body {
