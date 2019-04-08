@@ -72,25 +72,20 @@ $("#drift-button").on("click", function display() {
             imageDiv.addClass("image")
             imageDiv.attr("src", result.coverImage);
             displayRating.append(rating);
-<<<<<<< HEAD
-            activeDiv.append(imageDiv, title);
-=======
-            activeDiv.append(imageDiv, title, displayDes);
->>>>>>> 167cc4652bf6a693a55602c26d1e593e8467dd3c
+            activeDiv.append(imageDiv, title );
             $(displayDes).append(description);
-            $("#bottom_div").append(activeDiv);
+            $("#cards").append(activeDiv);
 
             activeDiv.css({
                 "margin-top": "5px",
                 "background-color": "navy",
-                "margin-left": "85px",
+                "margin-left": "80px",
                 "margin-right": "5px",
-                "margin-bottom": "10px",
+                "margin-bottom": "20px",
                 "text-align": "center",
                 "width": "30%",
-                "height": "100%",
+                "height": "200px",
                 "bottom": "20px"
-
             })
 
             displayDes.css({
@@ -175,10 +170,10 @@ function media(win) {
             "background-color": "navy",
             "margin-left": "2px",
             "margin-right": "2px",
-            "margin-bottom": "10px",
+            "margin-bottom": "25px",
             "text-align": "center",
             "width": "95%",
-            "height": "100%"
+            "height": "90%"
 
         })
 

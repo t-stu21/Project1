@@ -13,6 +13,8 @@ $(document).ready(function () {
         }
         node.addEventListener('animationend', handleAnimationEnd)
     }
+    $("#state").removeClass('invalid');
+    $("#city").removeClass('invalid');
 //on click function 
     $("#drift-button").on("click", function (event) {
         event.preventDefault();
