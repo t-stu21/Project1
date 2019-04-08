@@ -1,25 +1,54 @@
 $(document).ready(function () {
 
-    // var database = firebase.database(); //firebase variable
+
     var weatherIconp = ''; //for weather icons
-
-
+//animate function 
+    function animate(element, animationName, callback) {
+        const node = document.querySelector(element)
+        node.classList.add('animated', animationName)
+        function handleAnimationEnd() {
+            node.classList.remove('animated', animationName)
+            node.removeEventListener('animationend', handleAnimationEnd)
+            if (typeof callback === 'function') callback()
+        }
+        node.addEventListener('animationend', handleAnimationEnd)
+    }
+//on click function 
     $("#drift-button").on("click", function (event) {
         event.preventDefault();
         $("#top_div").empty();
+  
         var cityLocation = $("#city").val().trim();
-        var stateLocation = $("#state").val().trim();
+        var stateLocation = $("#state").val();
 
-        //database.ref().set({
-        //    City: cityLocation,
-        //    State: stateLocation
-        //});
-
-
+//if location is good call the weather 
+            if (cityLocation && stateLocation)
+             {
+                callWeather();
+             }
+             //if location is not good animate the input type thats invalid
+             else {
+                if (!cityLocation) {
+                    $("#city").addClass('invalid');
+                    animate("#city", "heartBeat", _=>{
+                        $("#city").removeClass('invalid');
+                    });
+                } else if (!stateLocation) {
+                    $("#state").addClass('invalid');
+                    animate("#state", "heartBeat", _=>{
+                        $("#state").removeClass('invalid');
+                    });
+                    }
+                
+                }
+                    
+      
         console.log(cityLocation);
         console.log(stateLocation);
+
+        function callWeather() {
         // grabbing the location searched 
-        var searchLocat = "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=113LBdVIIvDY0K9ZzAPIvjkrbVShUugG&q=" + cityLocation + "%20" + stateLocation + "&language=en-us&details=true";
+        var searchLocat = "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=4Q9DJCTVu2oLZ5wB2LArLIjGUSqzYlLm&q=" + cityLocation + "%20" + stateLocation + "&language=en-us&details=true";
         console.log(searchLocat);
 
         $.ajax({
@@ -84,7 +113,7 @@ $(document).ready(function () {
                             weatherAppd.append(contP);
                             console.log(weatherAppd);
 
-                            
+
 
 
                             //variables for weather display
@@ -138,14 +167,15 @@ $(document).ready(function () {
                         win.addListener(media)
 
                     }
-                    )
-            }
 
-                    ,
+                    )
+            },
+
+
             )
 
 
     }
-        ,)
 })
-
+}
+)
