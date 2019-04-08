@@ -33,16 +33,31 @@ html, body {
     }
 
     #drift-button {
+      margin-top: 10px;
         color: white;
         background-color: navy;
         font-family: "Pacifico", cursive;
     }
     
    .jumbotron {
-       
+       z-index: 1;
        margin-bottom: 0;
        background-color: transparent;
    }
+
+   .card {
+    margin-bottom: 0;
+    width: 250px;
+    height: auto;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 0;
+  }
+  .results-header {
+    color: white;
+    background-color: navy;
+    font-family: "Pacifico", cursive;
+  }
 
    .lead {
      color: white;
