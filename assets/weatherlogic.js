@@ -66,7 +66,7 @@ $(document).ready(function () {
                 var locationKeyNew = locationResponse[0].Key;
 
                 //forecast URL
-                var forecast = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/" + locationKeyNew + "?apikey=4Q9DJCTVu2oLZ5wB2LArLIjGUSqzYlLm&language=en-us&details=true&metric=false/";
+                var forecast = "https://dataservice.accuweather.com/forecasts/v1/daily/5day/" + locationKeyNew + "?apikey=4Q9DJCTVu2oLZ5wB2LArLIjGUSqzYlLm&language=en-us&details=true&metric=false/";
                 //second key 	4Q9DJCTVu2oLZ5wB2LArLIjGUSqzYlLm
                 //key 1 113LBdVIIvDY0K9ZzAPIvjkrbVShUugG
                 //get forecast response
