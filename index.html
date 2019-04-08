@@ -2,36 +2,84 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Drift</title>
-  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drift</title>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
 
     <!-- Bootstrap CSS -->
+    
+    <!--css-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--css-->
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="drift.css">
+    
 
     <link rel="stylesheet" type="text/css" href="assets/Semantic-UI-CSS-master/semantic.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 
+    
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<!--<script src="assets/Semantic-UI-CSS-master/semantic.js"></script>-->
 
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <!--<script src="assets/Semantic-UI-CSS-master/semantic.js"></script>-->
 
 
 
 
-</head>
 
-<body>
-  <div class="row">
-    <div class="weather col-sm-12" id="top_div">
+
+  </head>
+
+  <body>
+     
+      <div id="carouselFluid" class="carousel slide carousel-fade h-100" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100 h-100" src="images/image1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 h-100" src="images/image2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 h-100" src="images/image3.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 h-100" src="images/image4.jpg" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block w-100 h-100" src="images/image5.jpg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 h-100" src="images/image6.jpg" alt="Third slide">
+                  </div>
+                  <div class="carousel-item">
+                      <img class="d-block w-100 h-100" src="images/image7.jpg" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 h-100" src="images/image8.jpg" alt="Third slide">
+                      </div>
+                      <div class="carousel-item">
+                          <img class="d-block w-100 h-100" src="images/image9.jpg" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100 h-100" src="images/image10.jpg" alt="Third slide">
+                          </div>
+                          
+          </div>
+        </div>
+
+
+
+    <div class="row">
+      <div class="weather col-sm-12 slide-in-top" id="top_div">
+
 
 
 
@@ -119,12 +167,16 @@
             </div>
             <div class="col-lg"></div>
 
+          </div>
+
+        </div>
+      </div>
+
     </div>
-  </div>
-  
-  <div class="results"></div>
-    <h2 id="city-display"></h2>
-    <h2 id="state-display"></h2>
+    </div>
+    </div>
+    </div>
+
 
     <div id="bottom_div" class="row">
         
@@ -200,8 +252,6 @@
                   </div>
                 </div>-->
 
-  </div>
-
 
 
 
@@ -217,6 +267,7 @@
 
 
     
+    
     <script src="assets/firebase-search-results.js"></script>
     <script src="assets/api.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
@@ -224,6 +275,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <script type="text/javascript" src="assets/carousel.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
    

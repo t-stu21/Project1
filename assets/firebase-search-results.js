@@ -12,6 +12,8 @@ var database = firebase.database();
 
 var citySearched = "";
 var stateSearched = "";
+var firstFive = [];
+var desThis = [];
 
 
 
@@ -47,14 +49,18 @@ $("#drift-button").on("click", function (event) {
   console.log(citySearched);
   console.log(stateSearched);
 
-  var results = {
+
+
+  var results = [{
     city: citySearched,
     state: stateSearched,
+
   };
 
   database.ref("searched").push(results);
-
+//console.log("1" + results, results.city[1], results.state[1]);
 });
+
 
 // database.ref("searched").on("value", function (childSnapshot) {
 // console.log(childSnapshot.val().city);
