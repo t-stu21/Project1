@@ -72,23 +72,20 @@ $("#drift-button").on("click", function display() {
             imageDiv.addClass("image")
             imageDiv.attr("src", result.coverImage);
             displayRating.append(rating);
-
-            activeDiv.append(imageDiv, title);
-
+            activeDiv.append(imageDiv, title );
             $(displayDes).append(description);
-            $("#bottom_div").append(activeDiv);
+            $("#cards").append(activeDiv);
 
             activeDiv.css({
                 "margin-top": "5px",
                 "background-color": "navy",
-                "margin-left": "85px",
+                "margin-left": "50px",
                 "margin-right": "5px",
-                "margin-bottom": "10px",
+                "margin-bottom": "20px",
                 "text-align": "center",
-                "width": "30%",
-                "height": "100%",
+                "width": "50%",
+                "height": "200px",
                 "bottom": "20px"
-
             })
 
             displayDes.css({
@@ -173,14 +170,26 @@ function media(win) {
             "background-color": "navy",
             "margin-left": "2px",
             "margin-right": "2px",
-            "margin-bottom": "10px",
+            "margin-bottom": "25px",
             "text-align": "center",
             "width": "95%",
-            "height": "100%"
+            "height": "90%"
 
         })
 
-    } 
+    } else {
+        activeDiv.css({
+            "margin-top": "5px",
+            "background-color": "navy",
+            "margin-left": "50px",
+            "margin-right": "5px",
+            "margin-bottom": "20px",
+            "text-align": "center",
+            "width": "50%",
+            "height": "200px",
+            "bottom": "20px"
+        })
+    }
 }
 
 var win = window.matchMedia("(max-width: 700px)")
