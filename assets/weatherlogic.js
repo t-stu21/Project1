@@ -50,7 +50,7 @@ $(document).ready(function () {
 
         function callWeather() {
         // grabbing the location searched 
-        var searchLocat = "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=4Q9DJCTVu2oLZ5wB2LArLIjGUSqzYlLm&q=" + cityLocation + "%20" + stateLocation + "&language=en-us&details=true";
+        var searchLocat = "https://dataservice.accuweather.com/locations/v1/cities/search?apikey=4Q9DJCTVu2oLZ5wB2LArLIjGUSqzYlLm&q=" + cityLocation + "%20" + stateLocation + "&language=en-us&details=true";
         console.log(searchLocat);
 
         $.ajax({
