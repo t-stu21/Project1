@@ -79,11 +79,11 @@ $("#drift-button").on("click", function display() {
             activeDiv.css({
                 "margin-top": "5px",
                 "background-color": "navy",
-                "margin-left": "80px",
+                "margin-left": "50px",
                 "margin-right": "5px",
                 "margin-bottom": "20px",
                 "text-align": "center",
-                "width": "30%",
+                "width": "50%",
                 "height": "200px",
                 "bottom": "20px"
             })
@@ -177,7 +177,19 @@ function media(win) {
 
         })
 
-    } 
+    } else {
+        activeDiv.css({
+            "margin-top": "5px",
+            "background-color": "navy",
+            "margin-left": "50px",
+            "margin-right": "5px",
+            "margin-bottom": "20px",
+            "text-align": "center",
+            "width": "50%",
+            "height": "200px",
+            "bottom": "20px"
+        })
+    }
 }
 
 var win = window.matchMedia("(max-width: 700px)")
