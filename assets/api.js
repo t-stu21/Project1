@@ -6,7 +6,13 @@ console.log("test" + citySearched);
 
 
 
-
+$(window).resize(function(){
+    if ($(window).width() <= 800){	
+        $("#top").hide();
+    }	else {
+        $("#top").show();
+    }
+});
 
 // ajax call for leezair api
 // will need to change target id to match tylers
@@ -177,6 +183,9 @@ function media(win) {
 
         })
 
+     
+
+        
     } else {
         activeDiv.css({
             "margin-top": "5px",
@@ -203,6 +212,8 @@ win.addListener(media)
 
 
     );
+
+  
 
 }})
 
