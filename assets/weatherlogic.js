@@ -50,7 +50,7 @@ $(document).ready(function () {
 
         function callWeather() {
         // grabbing the location searched 
-        var searchLocat = "https://dataservice.accuweather.com/locations/v1/cities/search?apikey=4Q9DJCTVu2oLZ5wB2LArLIjGUSqzYlLm&q=" + cityLocation + "%20" + stateLocation + "&language=en-us&details=true";
+        var searchLocat = "https://dataservice.accuweather.com/locations/v1/cities/search?apikey=113LBdVIIvDY0K9ZzAPIvjkrbVShUugG&q=" + cityLocation + "%20" + stateLocation + "&language=en-us&details=true";
         console.log(searchLocat);
 
         $.ajax({
@@ -66,7 +66,7 @@ $(document).ready(function () {
                 var locationKeyNew = locationResponse[0].Key;
 
                 //forecast URL
-                var forecast = "https://dataservice.accuweather.com/forecasts/v1/daily/5day/" + locationKeyNew + "?apikey=4Q9DJCTVu2oLZ5wB2LArLIjGUSqzYlLm&language=en-us&details=true&metric=false/";
+                var forecast = "https://dataservice.accuweather.com/forecasts/v1/daily/5day/" + locationKeyNew + "?apikey=113LBdVIIvDY0K9ZzAPIvjkrbVShUugG&language=en-us&details=true&metric=false/";
                 //second key 	4Q9DJCTVu2oLZ5wB2LArLIjGUSqzYlLm
                 //key 1 113LBdVIIvDY0K9ZzAPIvjkrbVShUugG
                 //get forecast response
